@@ -36,5 +36,6 @@
 #elif defined(__SAMD21__)
 #define HAL_PATH(PATH, NAME) XSTR(PATH/HAL/SAMD21/NAME)
 #else
-#error "Unsupported Platform!"
+//#error "Unsupported Platform!"
+#pragma "Unsupported Platform!"
 #endif

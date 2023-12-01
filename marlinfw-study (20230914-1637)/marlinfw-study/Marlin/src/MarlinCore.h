@@ -1,7 +1,15 @@
 #pragma once
-#include "inc/MarlinConfig.h"
 
-/*
+#define __AVR__
+#define __AVR_ATmega2560__
+#define SERIAL_XON_XOFF false
+#define EMERGENCY_PARSER false
+#define SERIAL_STATS_DROPPED_RX false
+#define SERIAL_STATS_RX_BUFFER_OVERRUNS false
+#define SERIAL_STATS_RX_FRAMING_ERRORS false
+#define SERIAL_STATS_MAX_RX_QUEUED false
+
+#include "inc/MarlinConfig.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -63,4 +71,3 @@ inline bool kill_state() { return READ(KILL_PIN) == KILL_PIN_STATE; }
 #endif
 
 extern const char M112_KILL_STR[];
-*/
